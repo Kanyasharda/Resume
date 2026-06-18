@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<head>
+<title>Student Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+    color:white;
+}
+
+/* Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+    z-index:-1;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    width:100%;
+    padding:15px;
+    background:rgba(0,0,0,0.8);
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:cyan;
+}
+
+/* Sections */
+section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* Home */
+.home-container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.profile-img{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    border:5px solid cyan;
+    object-fit:cover;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:cyan;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* Skills */
+.skills-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap:20px;
+    width:80%;
+    margin:auto;
+}
+
+.skill-box{
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    border-radius:10px;
+    border:1px solid cyan;
+}
+/* ABOUT */
+    width:100%;{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.about-container{
+    width:100%;
+    max-width:1000px;   /* controls readability */
+    text-align:center;
+}
+
+.about-container p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* Projects */
+.project-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.project-card{
+    width:250px;
+    padding:20px;
+    background:rgba(0,0,0,0.7);
+    border-radius:10px;
+    border:1px solid cyan;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+.contact-box{
+    background:rgba(0,0,0,0.7);
+    padding:20px;
+    border-radius:10px;
+    width:300px;
+}
+
+/* Fade animation */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{
+        flex-wrap:wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="home-container fade">
+        <img src="C:\Users\hp\OneDrive\Desktop\image.jpeg" class="profile-img">
+        <div>
+            <h1>Hi, I'm KANYA SHARDA</h1>
+            <p>Front-End Developer | Student</p>
+          <a href="C:\Users\hp\Downloads\resume.png" target="_blank" download class="btn">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-container"">
+        <h1>About Me</h1>
+        <p>
+I am a motivated college student with a strong interest in front-end development. 
+I enjoy creating responsive and user-friendly websites using HTML, CSS, and JavaScript. 
+I am always eager to learn new technologies and improve my skills.
+</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="fade">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Graphic Designing</div>
+            <div class="skill-box">MY SQL</div>
+            <div class="skill-box">PHP</div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="fade">
+        <h1>My Projects</h1>
+        <div class="project-container">
+
+            <div class="project-card">
+                <h3>Quiz Game</h3>
+                <p>Interactive quiz using JS & timer</p>
+              <a href="C:\Users\hp\OneDrive\Desktop\quiz game.html"target="_blank"class="btn"> View project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Marksheet</h3>
+                <p>Student marksheet using JS arrays</p>
+                <a href="C:\Users\hp\OneDrive\Desktop\asssignment 4.html" target="_blank" class="btn">View project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Form Validation</h3>
+                <p>Email form using regex</p>
+                <a href="C:\Users\hp\OneDrive\Desktop\registration form .html" target="_blank" class="btn">View project</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="fade contact-box">
+        <h1>Contact Me</h1>
+        <p>📞 <a href="tel:8923020368" style="color:cyan;">+91 8923020368</a></p>
+        <p>📧 <a href="mailto:Kanyasharda02@gmail.com" style="color:cyan;">Kanyasharda02@gmail.com</a></p>
+        <p>📍 Muzzaffarnagar,UP, India</p>
+    </div>
+</section>
+
+<script>
+// Fade on scroll
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.8;
+
+    faders.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < trigger){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
